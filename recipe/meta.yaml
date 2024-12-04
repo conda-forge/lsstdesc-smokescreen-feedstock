@@ -1,6 +1,6 @@
 {% set name = "smokescreen" %}
 {% set version = "1.3.0" %}
-{% set python_min = "3.9" %}
+{% set python_min = "3.12" %}
 
 package:
   name: lsstdesc-{{ name|lower }}
@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - numpy <=2.0
+    - numpy <2.0a0
     - scipy
     - astropy-base >=5.3.0
     - sacc >=0.12
