@@ -22,7 +22,7 @@ requirements:
     - hatch-vcs
     - pip
   run:
-    - python {{ python_min }}
+    - python >= {{ python_min }}
     - numpy <=2.0
     - scipy
     - astropy-base >=5.3.0
@@ -37,6 +37,8 @@ requirements:
 test:
   imports:
     - smokescreen
+  requires:
+    - python {{ python_min }}
   # no pip check since it is broken
   # commands:
   #   - pip check
