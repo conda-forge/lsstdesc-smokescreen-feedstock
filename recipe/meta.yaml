@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -29,9 +29,11 @@ requirements:
     - sacc >=0.12
     - pyccl >=3.0.2
     - jsonargparse >=4.0
+    - typeshed-client
     - cosmosis >=2.5
     - fitsio
     - firecrown
+    - cryptography
     - cosmosis-build-standard-library
 
 test:
