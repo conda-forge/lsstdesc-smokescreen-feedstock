@@ -1,5 +1,5 @@
 {% set name = "smokescreen" %}
-{% set version = "1.5.0" %}
+{% set version = "1.5.6" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/smokescreen-{{ version }}.tar.gz
-  sha256: 22f89159b692fe9f847fc8ea46d068147875144db1dce7e9fce31a2f4d561b9f
+  sha256: 6175764dc52f6d2758691e9be42f39ccbde9b5c700f89d6989ad078c09a44584
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
